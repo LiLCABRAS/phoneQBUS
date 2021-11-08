@@ -1,0 +1,616 @@
+<head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="scripts.js" type="text/javascript"></script>
+    <script src="debounce.min.js" type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+
+
+<div class="browser">
+    <object type="text/html" data="http://www.nopixel.online/browser/index.html" style="overflow:auto;border:none" class="browserin">
+    </object>
+</div>
+
+<img id="cursor" src="cursor.png">
+
+    <div class="phonealerts-container">
+        <img src="nui://phone/html/icons/newsms.png" style="width:28px; height:28px" class="newsms">
+        <img src="nui://phone/html/icons/pager.png" style="width:28px; height:28px" class="newemail">
+        <img src="nui://phone/html/icons/twatter.png" style="width:28px; height:28px" class="newtweet">
+
+    </div>
+    <div class="twatter-container2">
+
+        <span class="first"> 
+            
+           New Tweet!
+        </span>
+
+        <div class="whitebg2">
+            
+        </div>  
+
+    </div>
+
+<div class="full-screen">
+
+
+
+
+
+    <div class="phone-container twist" id="phone-c">
+        <div class="timeheader"> Syncing Location </div>
+
+
+
+    <div class="twatter-container">
+
+        <span class="first"> 
+            <div class="handle">   </div>
+           
+        </span>
+
+        <div class="whitebg">
+
+        </div>
+
+            <form id="newTweet-form">
+                <input id="postTwatter" class="defaultSearch" autocomplete="off" placeholder="Make a Tweet!">
+                <button type="submit" id="submit" class="homeTweet btnMarginLeft sans">Tweet</button>
+                <a href="#" class="homeTweet sans btnNotifyToggle">Notify</a>
+                <a href="#" class="homeTweet sans btnHome">Home</a>
+            </form>
+
+    </div>
+
+    <div class="GPS-container">
+        <br>
+        <input id="searchGPS" class="defaultSearch" autocomplete="off" placeholder="Search Address">
+        <div id="whitebgGPS" class="whitebgGPS">
+
+        </div>
+
+        <div class="centeredg">
+            <a href="#" class="button sans btnHome">Home</a>
+        </div>
+
+    </div>
+
+    <div class="keys-container">
+        <br>
+        <div class="fuckmylifelol">
+        <a href="#" class="button3 btnKey">Give Key</a> 
+         <a href="#" class="button3 btnWipeKeys">Wipe Keys</a>
+        <a href="#" class="button3 btnFurniture">Furniture</a>
+        <a href="#" class="button3 btnMortgage">Pay Mortgage</a>
+        <a href="#" class="button3 btnPropertyUnlock">Unlock Toggle</a>
+        </div>
+        <div id="whitebgKeys" class="whitebgKeys">
+
+        </div>
+
+        <div class="centeredg">
+            <a href="#" class="button sans btnHome">Home</a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    	<div class="google-container">
+
+        <div class="google">
+            <div class="header-container">
+                <div class="centered">
+                <img src="nui://phone/html/gurgle.png" style="width:80px; height:25px" class="headerimg"></div>
+            </div>
+
+            <input id="searchGurgle" class="defaultSearch" autocomplete="off" placeholder="Search Gurgle or type URL">
+
+            <div class="googleHome">
+
+                <div class="googleheader">
+                    <h2>Gurgling the Deep web</h2> Results processed in (0.0001 second)
+                </div>
+
+                <div id="nukeDiv">
+
+                </div>
+
+            </div>
+            </div>
+
+            <div class="centeredg">
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+        <div class="body home">
+            <div class="centeredbuttons">
+
+                <a href="#" class="buttonsq sans btnAssistance" style="z-index:999;" data-tooltip="Yellow Pages" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/yellowpages.png">
+                    <i class="fa fa-codepen"></i> </a>
+
+                <a href="#" class="buttonsq sans btnMessages" style="z-index:998;" data-tooltip="Messages" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/sms.png"> <i class="fa fa-codepen"></i> </a>
+
+                <a href="#" class="buttonsq sans btnNewMessage" style="z-index:997;" data-tooltip="New SMS" data-position="top" class="top"><img class="imgIcon" src="nui://phone/html/icons/newsms.png"></a>
+                <a href="#" class="buttonsq sans btnContacts" style="z-index:996;" data-tooltip="Contacts" data-position="top" class="top"><img class="imgIcon" src="nui://phone/html/icons/contacts.png"></a>
+
+                <a href="#" class="buttonsq sans btnPhoneNumber" style="z-index:1998;" data-tooltip="Calls" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/phone.png"></a>
+
+                <a href="#" class="buttonsq sans btnMarkers" style="z-index:1997;" data-tooltip="GPS" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/gps.png"></a>
+
+  
+
+				<a href="#" class="buttonsq sans btnAlerts" style="z-index:3995;" data-tooltip="Job Alerts" data-position="top" class="top"><img class="imgIcon" src="nui://phone/html/icons/jobalerts.png"></a>
+
+				<a href="#" class="buttonsq sans btnAccount" style="z-index:3997;" data-tooltip="Account Information" data-position="left" class="left"><img class="imgIcon" src="nui://phone/html/icons/account.png"></a>
+
+                <a href="#" class="buttonsq sans btnCamera" style="z-index:4994;" data-tooltip="Los Santos Web" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/internet.png"></a>
+
+
+
+
+
+
+                <a href="#" class="buttonsq sans btnTwatter" style="z-index:4999;" data-tooltip="Twitter" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/twatter.png">
+                <i class="fa fa-codepen"></i> </a>
+
+                <a href="#" class="buttonsq sans btnGarage" style="z-index:4994;" data-tooltip="Garage" data-position="left" class="left"><img class="imgIcon" src="nui://phone/html/icons/car.png"></a>
+
+                <a href="#" class="buttonsq sans btnHelp" style="z-index:5994;" data-tooltip="Help" data-position="left" class="left"><img class="imgIcon" src="nui://phone/html/icons/help.png"></a>
+
+                <a href="#" class="buttonsq sans btnMute" style="z-index:5994;" data-tooltip="Toggle Incoming Sounds" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/call2.png"></a>
+
+                <a href="#" class="buttonsq sans btnStocks" style="z-index:5994;" data-tooltip="Stocks" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/stocks.png"></a>
+
+                <a href="#" class="buttonsq sans btnTaskGang" style="z-index:6994;" data-tooltip="Group Tasks" data-position="left" class="left"><img class="imgIcon" src="nui://phone/html/icons/blackmarkettasks.png"></a>
+
+
+                <a href="#" class="buttonsq sans btnTaskGroups" style="z-index:6999;" data-tooltip="My Groups" data-position="left" class="left"><img class="imgIcon" src="nui://phone/html/icons/groups.png"></a>
+
+
+                <a href="#" class="buttonsq sans btnGoogle" style="z-index:7997;" data-tooltip="Gurgle Internet" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/internet.png"></a>
+
+
+             
+              <a href="#" class="buttonsq sans btnProperty2" style="z-index:8997;" data-tooltip="Your Keys" data-position="top" class="top"><img class="imgIcon" src="nui://phone/html/icons/properties2.png"></a>
+
+              <a href="#" class="buttonsq sans btnNotifications" style="z-index:9000;" data-tooltip="Recent Emails" data-position="top" class="top"><img class="imgIcon" src="nui://phone/html/icons/pager.png"></a>
+
+                <a href="#" class="buttonsq sans btnPagerType encrypted" style="z-index:9001;" data-tooltip="Email Filter" data-position="left" class="left"><img class="imgIcon encrypted" src="nui://phone/html/icons/pager2.png"></a>
+
+                <a href="#" class="buttonsq sans btnPagerToggle encrypted" style="z-index:9997;" data-tooltip="Email Toggle" data-position="right" class="right"><img class="imgIcon encrypted" src="nui://phone/html/icons/pager3.png"></a>
+
+              
+                 <a href="#" class="buttonsq sans btnDecrypt decrypt" style="z-index:9998;" data-tooltip="Decryption" data-position="top" class="top"><img class="imgIcon decrypt" src="nui://phone/html/icons/decrypt.png"></a>
+
+                  <a href="#" class="buttonsq sans btnProperty" style="z-index:9999;" data-tooltip="Real Estate" data-position="top" class="top"><img class="imgIcon" src="nui://phone/html/icons/properties.png"></a>
+
+
+                  <a href="#" class="buttonsq sans btnDecrypt2 decrypt2" style="z-index:99999;" data-tooltip="Unknown App" data-position="right" class="right">VPN CON</a>
+
+                <a href="#" class="buttonsq sans btnPackages" style="z-index:99991;" data-tooltip="Packages" data-position="right" class="right"><img class="imgIcon" src="nui://phone/html/icons/packages.png"></a>
+
+                <a href="#" class="buttonsq sans btnTrucker Trucker" style="z-index:99992;" data-tooltip="Delivery Job" data-position="right" class="right"><img class="imgIcon Trucker" src="nui://phone/html/icons/trucker.png"></a>
+
+
+
+
+            </div>
+
+            <div class="callactive">
+
+                <div class="buttoncall sans btnAnswer">Answer</div>
+                <div class="buttonhangup sans btnHangup">Hangup</div>
+            </div>
+
+        </div>
+
+
+        <div class="calls-container">
+            <h3>Recent Calls</h3>
+            <div id="wrapcallsSHITLOL">
+
+            </div>
+            <div class="centeredg">
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+        <div class="group-container">
+            <div id="wrapgroupSHITLOL">
+
+            </div>
+            <div class="centeredg">
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+
+        <div class="realestateOutstanding-container">
+
+            <div class="wrapoutstandingSHITLOL">
+
+
+
+            </div>
+
+            <div class="centeredg">
+
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+
+        </div>
+
+        <div class="realestate-container">
+
+            <div id="wrapgroupSHITLOL">
+
+                <div class="centeredg2">
+
+                    <a href="#" class="button2 sans btnPropertyModify">Modify House</a>
+                    <a href="#" class="button2 sans btnPropertyReset">Modify Reset</a>
+                    <a href="#" class="button2 sans btnPropertySetGarage">Set A Garage Spawn</a>
+                    <a href="#" class="button2 sans btnPropertyWipeGarages">Wipe Garages</a>
+                    <a href="#" class="button2 sans btnPropertyClothing">Set Clothing Area</a>
+                    <a href="#" class="button2 sans btnPropertyStorage">Set Storage Area</a>
+                    <a href="#" class="button2 sans btnPropertySetBackdoorInside">Set Backdoor Inside</a>
+                    <a href="#" class="button2 sans btnPropertySetBackdoorOutside">Set Backdoor Outside</a>
+                    <a href="#" class="button2 sans btnPropertyHouseCreationPoint">Set Creation Point</a>
+                    <a href="#" class="button2 sans btnPropertyStopHouse">Stop Modification</a>
+                    <a href="#" class="button2 sans btnPropertyUpdateHouse">Save Modification</a>
+                    <a href="#" class="button2 sans btnPropertyUnlock">Unlock Toggle</a>
+
+
+
+                    <a href="#" class="button2 sans btnPropertyOutstanding">Check Outstanding</a>
+
+                    <form id="buyProperty-form" class="buyProperty-form">
+                        <input id="cid" class="propertyDefault" autocomplete="off" placeholder="Cid Number">
+                        <input id="PropertyPrice" class="propertyDefault" autocomplete="off" placeholder="Amount">
+                        <a href="#" class="button2 sans btnPropertySell">Sell House</a>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="centeredg">
+
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="error-container">
+            <div id="wrappermissionSHITLOL">              
+              <div class="noperm"> Loading.</div>
+            </div>
+            <div class="centeredg">
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="GroupManager-container">
+
+            <div id="wrapGroupManagerSHITLOL">              
+
+            </div>
+
+
+            <div class="centeredg">
+
+                <div class="bank">
+                    
+                </div> <br>
+
+                <form id="addBank-form">
+                    <input id="gangidbank" class="stockDefault" autocomplete="off" placeholder=""  type="hidden" >
+                    <input id="cashamount" class="stockDefaultSingle" autocomplete="off" placeholder="Cash Amount">
+                    <a href="#" class="button22 bankGroup">Bank</a>
+                </form>  
+
+                <form id="payCash-form">
+                    <input id="gangidpay" class="stockDefault" autocomplete="off" placeholder=""  type="hidden" >
+                    <input id="cid" class="stockDefault" autocomplete="off" placeholder="Id Number">
+                    <input id="cashamount" class="stockDefault" autocomplete="off" placeholder="Amount">
+                    <a href="#" class="button22 payGroup">Pay</a>
+                </form>
+
+                <form id="newRank-form">
+                    <input id="gangidrank" class="stockDefault" autocomplete="off" placeholder=""  type="hidden" >
+                    <input id="cid" class="stockDefault" autocomplete="off" placeholder="Id Number">
+                    <input id="newrank" class="stockDefault" autocomplete="off" placeholder="New Rank">
+                    <a href="#" class="button22 promoteGroup">Update Rank</a>
+                </form>
+                                       
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="gangtask-container">
+            <div id="wraptaskSHITLOL">              
+
+            </div>
+            <div class="centeredg">
+
+                    <form id="newTask-form">
+                        <input id="taskid" class="stockDefault" autocomplete="off" placeholder="Blockchain">
+                        <input id="targetid" class="stockDefault" autocomplete="off" placeholder="Target ID">
+                    </form>
+
+                <a href="#" class="button sans btnGiveTask">Give</a>
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+
+        <div class="stock-container">
+            <div id="wrapstockSHITLOL">
+                  
+            </div>
+            <div class="centeredg">
+
+                    <form id="newStock-form">
+                    <input id="stockid" class="stockDefault" autocomplete="off" placeholder="Stock ID">
+                    <input id="targetid" class="stockDefault" autocomplete="off" placeholder="Target ID">
+                    <input id="amount" class="stockDefault" autocomplete="off" placeholder="Send Amount"></form>
+
+                <a href="#" class="button sans btnSendStock">Send</a>
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+
+        <div class="account-container">
+        	<div id="wrapSHITLOL">
+	            <div id="footer-information">
+	                <b>Cash:</b> $500 | <b>Bank:</b> $19823101 | <b>Job:</b> Taxi
+	            </div>
+            </div>
+
+            <div class="centeredg">
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="secondary-container">
+
+            <div id="wrapSHITLOL">
+
+
+                <a href="#" class="buttonSJ sans 2ndRemove">Remove Filter</a>
+                <a href="#" class="buttonSJ sans 2ndWeedSt">Weed Street Dealer</a>
+                <a href="#" class="buttonSJ sans 2ndWeedHigh">Weed Distributor</a>
+
+                <a href="#" class="buttonSJ sans 2ndMethSt">Cocaine Street Dealer</a>
+                <a href="#" class="buttonSJ sans 2ndMethHigh">Cocaine Distributor</a>
+                <a href="#" class="buttonSJ sans 2ndGunSt">Gun Street Dealer</a>
+
+                <a href="#" class="buttonSJ sans 2ndGunHigh">Gun Distributor</a>
+
+                <a href="#" class="buttonSJ sans 2ndMoneyCleaner">Money Launderer</a>
+
+                <a href="#" class="buttonSJ sans 2ndMoneySt">Money Street Dealer</a>
+                <a href="#" class="buttonSJ sans 2ndMoneyHigh">Money Set Distributor</a>
+
+            </div>
+
+            <div class="centeredg">
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="assistance-container">
+            <div id="wrapSHITLOL">
+            <div class="centered">
+
+                <div class="lstnotificationsYP">
+
+                </div>
+
+                <form id="newAdvert-form">
+                    <input id="postAdvert" class="defaultSearch" autocomplete="off" placeholder="Post A Short Advert!">
+                </form>
+                    <a href="#" class="button sans btnSubmitYP">Post</a>
+                    <a href="#" class="button sans btnDeleteAdvert">Delete</a>
+                    <a href="#" class="button sans btnHome">Home</a>
+
+
+            </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="body notifications-container">
+            <div id="wrapSHITLOL">
+
+  
+                    <div id="emails">                        
+
+                    <div class="lstnotifications">
+                    </div>
+                    </div>
+
+
+            </div>
+            <div class="footer">
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+        <div class="body messages-container">
+            <div id="wrapSHITLOL">
+
+                <div class="lstMsgs">
+                </div>
+
+            </div>
+            <div class="footer">
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+        </div>
+
+        <div class="body message-container">
+            <div id="wrapSHITLOL">
+                <div class="numberReading">0</div>
+                <div class="lstMsgsRead">
+                </div>
+            </div>
+
+            <div class="footer">
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+        </div>
+
+        <div class="body newMessage-container">
+            <br>
+            <h3>NEW MESSAGE</h3>
+            <div class="form">
+            <form id="newMessage-form">
+                <input id="number" type="number" placeholder="Phone Number" class="sans" required/>
+                <br>
+                <textarea id="message" placeholder="Message" class="sans2" cols="40" rows="5"></textarea>
+                <br>
+            </div>
+
+
+
+            </form>
+
+            <div class="footer">
+
+                <a href="#" class="button sans btnSendSMS" style=" margin-top:10px;">Send</a>
+                <a href="#" class="button sans btnHome" style=" margin-top:10px;">Home</a>
+            </div>
+
+        </div>
+        <div class="body contacts-container">
+                
+                <div class="contacts-wrap">
+
+                </div>
+
+
+            <div class="footer">
+
+                <a href="#" class="button sans btnNewContact">Add New</a>
+                <a href="#" class="button sans btnHome">Home</a>
+
+            </div>
+        </div>
+
+
+        <div class="body vehicles-container">
+                
+                <div class="vehicles-wrap">
+
+                </div>
+
+
+            <div class="footer">
+                <a href="#" class="button sans btnHome">Home</a>
+                <a href="#" class="button sans btnOutstanding">City Loans</a>
+            </div>
+        </div>
+
+        <div class="body newContact-container">
+            <div class="form">
+                <form id="newContact-form"><br>
+                    <input id="name" type="text" placeholder="Name" class="sans" required/>
+                    <input id="number" type="number" max="6289999999" placeholder="Number" class="sans" required/>
+                </form>
+                <div class="footer">
+                    <a href="#" class="button sans btnAddContact">Add</a>
+                    <a href="#" class="button sans btnHome">Home</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="body trucker-container">
+                
+                <div class="trucker-wrap">
+
+                </div>
+
+            <div class="footer">
+                <a href="#" class="button sans btnHome">Home</a>
+                <a href="#" class="button sans btnDelivery">Delivery</a>
+            </div>
+        </div>
+
+        <div class="body packages-container">
+                
+                <div class="packages-wrap">
+
+                </div>
+
+                <div class="buttonAcceptPackage sans btnRequest">Accept Delivery</div>
+
+            <div class="footer">
+                <a href="#" class="button sans btnHome">Home</a>
+            </div>
+        </div>
+
+
+        <div class="body alerts-container">
+            <div class="form">
+                <form id="alerts-form">
+
+                        <table cellspacing="0" cellpadding="1" border="1" width="100%">
+                            <tr>
+                                <th>Location</th>
+                                <th>Actions</th>
+                            </tr>
+                        </table>
+
+                        <div class="alerts-wrap">
+
+                            
+                        </div>
+
+
+                </form>
+                <div class="footer">
+                    <a href="#" class="button sans btnHome">Home</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
